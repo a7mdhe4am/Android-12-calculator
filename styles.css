@@ -1,9 +1,7 @@
 :root {
-    --calculator: #171717;
     --screen: #171717;
     --btn-back: #404040;
     --opera-btn: #737373;
-    --equal-btn: #67e8f9;
 }
 
 * {
@@ -14,14 +12,13 @@
 
 html {
     min-height: 100%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    min-height: 100%;
-    
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
 }
 
 body {
-    background-color: white;
     min-height: 100%;
+    margin-bottom: 20px;
 }
 
 main {
@@ -29,38 +26,43 @@ main {
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
     width: auto;
-    height: 100vh;
+    height: 75vh;
+    min-height: 500px;
 }
 
 .calculator {
     width: 400px;
-    position: absolute;
-    font-size: 50px;
-    height: 90%;
-    top: 5%;
-    border: 1px solid;
+    background-color: var(--screen);
+    border: none;
     box-shadow: 0px 10px 5px #57534e;
 }
 
 .screen {
-    width: auto;
-    height: 30%;
-    background-color: var(--screen);
+    color: white;
     padding: 10px 20px;
     text-align: right;
+    background-color: var(--screen);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.last {
+    min-height: 32px;
+    font-size: 20px;
+}
+
+.current {
+    min-height: 64px;
+    font-size: 40px;
 }
 
 .btns-container {
-    padding: 10px;
-    font-size: 40px;
-    width: auto;
-    height: 70%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 10px;
+    grid-gap: 10px;
     background-color: var(--btn-back);
 }
 
@@ -68,10 +70,13 @@ button {
     background-color: var(--btn-back);
     color: white;
     border: none;
-    font-size: 40px;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 button:hover {
-    background-color: var(--calculator);
+    background-color: var(--screen);
 }
 
