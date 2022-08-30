@@ -1,2 +1,2 @@
-# Android 12 calculator
+# Simple calculator
  
